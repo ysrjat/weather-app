@@ -1,10 +1,11 @@
 {
   "recommendations": [
     "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
     "batisteo.vscode-django",
     "wholroyd.jinja",
-    "formulahendry.code-runner",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "VisualStudioExptTeam.intellicode-api-usage-examples"
+    "formulahendry.code-runner"
   ]
 }
