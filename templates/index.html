@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf_9">
+        <title> Weather</title>
+        
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="row" style="background: grey; color: white;">
+            <div align="center"><h1 class="col-md-3 text-center">Weather Detector</h1></div>
+        </nav>
+        <br />
+        <br />
+        <center class="row">
+            <form action="" method="POST" class="col-md-6 col-md-offset-3">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="text" class="form-control" name= "city" placeholder="Enter your latitude">
+                   
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glypincon glyphicon-screen"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </center>
+            <div class="row">
+                {% if data.country_code %}
+                <div class="col-md-6 col-md-offset-3">
+                    <h1>{{city}}</h1>
+                    <h3>coutnry  code:{{data.country_code}}</h3>
+                    <h5>coordinate : {{data.coordinate}}</h5>
+                    <h5>temp :{{data.temp}}</h5>
+                    <h5>pressure : {{data.pressure}}</h5>
+                    <h5>humidity : {{data.humidity}}</h5>
+                </div>
+                {% endif %}
+            </div>
+
+
+    </body>
+</html>
